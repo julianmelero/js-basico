@@ -43,3 +43,31 @@ var filtro = articles.filter(function(article){
 });
 
 filtro;
+
+// Map Regresa el nombre de los artículos
+var nombreArticulos = articles.map( function (article) {
+    return nombreArticulos.nombre;
+});
+
+// Find Devuelve el articulo con ese nombre
+var findart = articles.find( function (article) {
+    return article.nombre === "Laptop";
+});
+
+// {nombre: "Laptop", costo: 20000}
+
+// Foreach
+articules.foreach(function (article) {
+    article.nombre;
+});
+
+articles.forEach(article => {
+    console.log(article.nombre);
+});
+
+// Some
+var artbarato = articles.some( function (article) {
+    return article.costo <= 700;
+});
+// Devuelve True o False
+
