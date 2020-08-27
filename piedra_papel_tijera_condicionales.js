@@ -9,23 +9,42 @@ Si sale lo mismo empate
 */
 
 var opciones = ["piedra","papel","tijera"];
+var rnd_cpu, rnd_usr;
 
-// Cogemos una opción randomizada para la CPU
-var rnd_cpu = Math.floor((Math.random() * 3 ) + 1);
+function get_randoms(){
+    // Cogemos una opción randomizada para la CPU
+    rnd_cpu = Math.floor((Math.random() * 3 ) );
 
-// Cogemos una opción randomizada para el usuario
-var rnd_usr = Math.floor((Math.random() * 3 ) + 1);
+    // Cogemos una opción randomizada para el usuario
+    rnd_usr = Math.floor((Math.random() * 3 ) );    
+}
 
 
-function winner(op1,op2){
+
+function winner(){
+    get_randoms();    
+    let op1 = rnd_cpu;
+    let op2 = rnd_usr;
+    console.log("Ha jugado como: " + opciones[op1]);
+    console.log("Tu adversario es: " + opciones[op2]);
     if (op1 == op2) {
         console.log("Empate");
-    }else if (op1 == 1 && op2 == 2) {
-        console.log("Has perdido contra la " + opciones[rnd_cpu]);
+    }else if (op1 == 0 && op2 == 1) {
+        console.log("Has perdido contra " + opciones[op2]);
     
+    }else if (op1 == 0 && op2==2) {
+        console.log("Has ganado contra " + opciones[op2]);    
+    }else if (op1 == 1 && op2 == 2) {
+        console.log("Has perdido contra " + opciones[op2]);
+    }else if (op1 == 1 && op2==0) {
+        console.log("Has ganado contra " + opciones[op2]);    
+    }else if (op1 == 2 && op2 == 0) {
+        console.log("Has perdido contra " + opciones[op2]);
+    }else if (op1 == 2 && op2==1) {
+        console.log("Has ganado contra " + opciones[op2]);
     }
 }
 
-winner(rnd_usr,rnd_cpu);
+winner();
 
 
