@@ -71,3 +71,10 @@ var artbarato = articles.some( function (article) {
 });
 // Devuelve True o False
 
+// .push()
+// El método .push() nos permite agregar uno o más elementos al final de un array.
+
+// .shift()
+// Ahora pasemos a la otra cara de la moneda donde necesitamos eliminar un elemento del array. .shift() eliminar el primer elemento de un array, es decir, elimina el elemento que esté en el índice 0.
+
+// .pop() eliminará el último elemento de un array. 
